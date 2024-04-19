@@ -102,6 +102,9 @@
     #! /bin/sh
     echo "This is a custom script."
   '')
+  qemu
+  qemu_kvm
+  virt-manager
   neovim
   wget
   git

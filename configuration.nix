@@ -24,8 +24,6 @@
   # Optionally, enable support for KVM/QEMU if you're planning to use it for virtualization
   virtualisation.libvirtd.enableKvm = true;
 
-  # Ensure your user is part of the necessary group to manage VMs
-  users.users.jay.extraGroups = [ "libvirt" ];
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -91,7 +89,7 @@
   users.users.jay = {
     isNormalUser = true;
     description = "jay";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
       kate

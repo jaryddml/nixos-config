@@ -89,7 +89,7 @@
   users.users.jay = {
     isNormalUser = true;
     description = "jay";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirt" ];
     packages = with pkgs; [
       firefox
       kate

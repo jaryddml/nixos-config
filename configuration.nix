@@ -18,7 +18,14 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # Enable libvirt
+  virtualisation.libvirtd.enable = true;
 
+  # Optionally, enable support for KVM/QEMU if you're planning to use it for virtualization
+  virtualisation.libvirtd.enableKvm = true;
+
+  # Ensure your user is part of the necessary group to manage VMs
+  users.users.jay.extraGroups = [ "libvirt" ];
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";

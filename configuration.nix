@@ -113,6 +113,9 @@
   postgresql
   fail2ban
   jupyter
+  vscode
+  neofetch
+  discord
   (python3.withPackages (ps: with ps; [
     numpy
     pandas

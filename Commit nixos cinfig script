@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Navigate to the NixOS configuration directory
+cd /etc/nixos
+
+# Add all changes to Git
+git add -A
+
+# Commit changes
+GIT_COMMITTER_NAME="$(sudo git config user.name)"
+GIT_COMMITTER_EMAIL="$(sudo git config user.email)"
+export GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL
+git commit -m "Auto-commit $(date +%Y-%m-%d:%H:%M:%S)"
+sudo git push origin master
+# Execute NixOS rebuild
+sudo nixos-rebuild switch "$@"

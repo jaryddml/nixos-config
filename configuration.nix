@@ -102,8 +102,23 @@
     #! /bin/sh
     echo "This is a custom script."
   '')
-  vim
+  neovim
   wget
+  git
+  tmux
+  curl
+  gcc
+  cmake
+  docker
+  postgresql
+  fail2ban
+  jupyter
+  (python3.withPackages (ps: with ps; [
+    numpy
+    pandas
+    matplotlib
+    requests
+  ]))
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

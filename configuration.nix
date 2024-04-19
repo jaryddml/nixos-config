@@ -102,6 +102,7 @@
     #! /bin/sh
     echo "This is a custom script."
   '')
+  qemu-full
   neovim
   wget
   git

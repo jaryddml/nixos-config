@@ -1,4 +1,4 @@
-# Test change for auto-commit script
+# Test change for auto-commit script v2
 
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page

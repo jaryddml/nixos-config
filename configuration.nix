@@ -101,6 +101,7 @@
     #! /bin/sh
     echo "This is a custom script."
   '')
+  xclip
   neovim  
   wget
   git

@@ -101,9 +101,6 @@
     #! /bin/sh
     echo "This is a custom script."
   '')
-  qemu
-  qemu_kvm
-  virt-manager
   neovim
   wget
   git
@@ -124,6 +121,8 @@
     matplotlib
     requests
   ]))
+  nodejs
+  nodePackages.pyright
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

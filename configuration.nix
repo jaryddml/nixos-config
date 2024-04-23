@@ -101,9 +101,7 @@
     #! /bin/sh
     echo "This is a custom script."
   '')
-    (neovim.override {
-    withClipboard = true;  # Ensure this is true
-  })
+  neovim  
   wget
   git
   tmux

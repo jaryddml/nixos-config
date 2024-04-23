@@ -102,8 +102,6 @@
     echo "This is a custom script."
   '')
     (neovim.override {
-    withPython3 = true;
-    vimAlias = true;
     withClipboard = true;  # Ensure this is true
   })
   wget

@@ -107,6 +107,7 @@
     unzip
     
     # Development Tools
+    lua
     dotnet-sdk
     clang-tools
     gcc

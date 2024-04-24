@@ -97,33 +97,53 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  (pkgs.writeShellScriptBin "my-custom-script" ''
-    #! /bin/sh
-    echo "This is a custom script."
-  '')
-  xclip
-  neovim  
-  wget
-  git
-  tmux
-  curl
-  gcc
-  cmake
-  docker
-  postgresql
-  fail2ban
-  jupyter
-  vscode
-  neofetch
-  discord
-  (python3.withPackages (ps: with ps; [
-    numpy
-    pandas
-    matplotlib
-    requests
-  ]))
-  nodejs
-  nodePackages.pyright
+    # Basic Tools
+    xclip
+    wget
+    git
+    tmux
+    curl
+    neofetch
+    unzip
+    
+    # Development Tools
+    dotnet-sdk
+    clang-tools
+    gcc
+    cmake
+    docker
+    nodejs
+    neovim
+    vscode
+    jupyter
+    (python3.withPackages (ps: with ps; [
+      numpy
+      pandas
+      matplotlib
+      requests
+    ]))
+
+    # Language Servers and Formatters
+    nodePackages.pyright
+
+    # Database Systems
+    postgresql
+
+    # Security Tools
+    fail2ban
+
+    # Communication Tools
+    discord
+
+    # Additional Necessary Packages
+    unzip
+    dotnet-sdk
+
+    # Custom Scripts
+    (writeShellScriptBin "my-custom-script" ''
+      #! /bin/sh
+      echo "This is a custom script."
+    '')
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -104,8 +104,8 @@
     tmux
     curl
     neofetch
-    unzip
-    
+    unzip    
+
     # Development Tools
     lua
     dotnet-sdk
@@ -125,7 +125,7 @@
     ]))
 
     # Language Servers and Formatters
-    nodePackages.pyright
+   # nodePackages.pyright
 
     # Database Systems
     postgresql
@@ -137,8 +137,7 @@
     discord
 
     # Additional Necessary Packages
-    unzip
-    dotnet-sdk
+
 
     # Custom Scripts
     (writeShellScriptBin "my-custom-script" ''

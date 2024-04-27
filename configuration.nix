@@ -117,6 +117,7 @@
     neovim
     vscode
     jupyter
+    qttools
     (python3.withPackages (ps: with ps; [
       numpy
       pandas

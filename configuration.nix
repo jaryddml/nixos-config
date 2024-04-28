@@ -105,7 +105,10 @@
     curl
     neofetch
     unzip    
-
+    obs-studio
+    vlc
+    kdenlive
+    go
     # Development Tools
     lua
     dotnet-sdk
@@ -117,7 +120,7 @@
     neovim
     vscode
     jupyter
-    qttools
+    qt5.full
     (python3.withPackages (ps: with ps; [
       numpy
       pandas
